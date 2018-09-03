@@ -1,0 +1,10 @@
+# Exclude IDE files
+.settings
+.project
+/target
+
+.classpath
+# Maven files
+mvnw
+mvnw.cmd
+.mvn
