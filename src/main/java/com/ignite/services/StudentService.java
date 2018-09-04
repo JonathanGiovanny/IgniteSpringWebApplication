@@ -1,10 +1,11 @@
 package com.ignite.services;
 
-import java.util.Iterator;
+import java.util.List;
 
 import com.ignite.model.Student;
 
 public interface StudentService {
 
-	public Iterator<Student> getAll();
+	public List<Student> getAll();
+	public Student getOne(Long id);
 }

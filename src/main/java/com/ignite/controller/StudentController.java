@@ -1,9 +1,10 @@
 package com.ignite.controller;
 
-import java.util.Iterator;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,12 @@ public class StudentController {
 	private StudentService studentService;
 
 	@GetMapping("/getAll")
-	public Iterator<Student> getAll() {
+	public List<Student> getAll() {
 		return studentService.getAll();
+	}
+
+	@GetMapping("/getOne/{id}")
+	public Student getOne(@PathVariable Long id) {
+		return studentService.getOne(id);
 	}
 }
