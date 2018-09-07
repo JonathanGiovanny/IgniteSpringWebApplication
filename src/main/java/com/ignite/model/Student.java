@@ -11,8 +11,6 @@ import javax.persistence.Table;
 import org.apache.ignite.cache.query.annotations.QueryGroupIndex;
 import org.apache.ignite.cache.query.annotations.QuerySqlField;
 
-import com.ignite.utilities.annotations.IgniteColumn;
-import com.ignite.utilities.annotations.IgniteId;
 import com.ignite.utilities.annotations.IgniteTable;
 
 import lombok.AllArgsConstructor;
@@ -36,19 +34,15 @@ public class Student implements Serializable {
 	private static final long serialVersionUID = 8833325000869266534L;
 
 	@Id
-	@IgniteId
 	@GeneratedValue
 	@Column(name = "STUDENT_ID")
-	@IgniteColumn(name = "STUDENT_ID")
 	@QuerySqlField(index = true, orderedGroups = { @QuerySqlField.Group(name = "idx1", order = 0) })
 	private Long id;
 
 	@Column(name = "STUDENT_NAME")
-	@IgniteColumn(name = "STUDENT_NAME")
 	@QuerySqlField(index = true, orderedGroups = { @QuerySqlField.Group(name = "idx1", order = 1) })
 	private String name;
 
 	@Column(name = "STUDENT_AVG")
-	@IgniteColumn(name = "STUDENT_AVG")
 	private Double avg;
 }
