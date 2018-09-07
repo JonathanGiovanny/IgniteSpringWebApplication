@@ -56,7 +56,7 @@ public class IgniteConfig {
 
 			cacheConfig.setCacheStoreFactory(storeFactory);
 
-//			cacheConfig.setQueryEntities(IgniteAutoConfig.getQueryEntities());
+			cacheConfig.setQueryEntities(IgniteAutoConfig.getQueryEntities());
 
 			igniteConfiguration.setCacheConfiguration(cacheConfig);
 
@@ -76,6 +76,6 @@ public class IgniteConfig {
 
 	@Bean
 	public IgniteCache<?, ?> igniteCache() {
-		return igniteInstance.getOrCreateCache("StudentCache");
+		return igniteInstance.getOrCreateCache(IgniteAutoConfig.getCacheNames().get(0));
 	}
 }

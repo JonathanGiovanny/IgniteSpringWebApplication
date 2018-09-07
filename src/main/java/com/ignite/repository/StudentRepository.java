@@ -14,6 +14,6 @@ public interface StudentRepository extends IgniteRepository<Student, Long> {
 	@Override
 	public List<Student> findAll();
 
-	@Query("SELECT id FROM Student WHERE orgId = ?")
+	@Query("SELECT s FROM Student s WHERE id = ?")
 	public Student findOne(Long id);
 }
