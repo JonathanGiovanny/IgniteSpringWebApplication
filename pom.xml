@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ignite</groupId>
-	<artifactId>IgniteNodeSpringAplication</artifactId>
+	<artifactId>IgniteSpringAplication</artifactId>
 	<version>0.1</version>
 	<packaging>jar</packaging>
 
-	<name>IgniteNodeSpringAplication</name>
+	<name>IgniteSpringAplication</name>
 	<description>Project flow: Spring -&gt; Hibernate -&gt; Ignite -&gt; H2</description>
 
 	<parent>
